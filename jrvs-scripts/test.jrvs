@@ -1,0 +1,6 @@
+console 'testing out console effect'
+create file 'E:/IdeaProjects/Jrvs Script/testing script/test.txt'
+#create folder 'E:/IdeaProjects/Jrvs Script/testing script folder/'
+#delete file 'E:/IdeaProjects/Jrvs Script/testing script/test.txt'
+#delete folder 'E:/IdeaProjects/Jrvs Script/testing script folder/'
+#write file 'E:/IdeaProjects/Jrvs Script/testing script/test.txt' 'testing write file effect'
