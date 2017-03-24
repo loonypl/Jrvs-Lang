@@ -1,4 +1,4 @@
-package amao.proj.jrvs.scripter.script;
+package amao.proj.jrvs.script.scripter.script;
 
 import java.io.File;
 

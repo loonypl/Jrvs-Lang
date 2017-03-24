@@ -1,4 +1,4 @@
-package amao.proj.jrvs.scripter.script.executors.effects.file;
+package amao.proj.jrvs.script.scripter.script.executors.effects.file;
 
 import java.io.File;
 import java.io.IOException;

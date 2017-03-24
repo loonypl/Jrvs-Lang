@@ -1,6 +1,5 @@
-package amao.proj.jrvs.scripter.script.executors.effects.file;
+package amao.proj.jrvs.script.scripter.script.executors.effects.file;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,20 +10,21 @@ public class Write {
     public Write(LinkedList<Object> objs) {
         String path = (String) objs.get(0);
         String write = (String) objs.get(1);
-        if (new File(path).exists()) {
-            BufferedWriter writer = null;
+        File file = new File(path);
+        if (file.exists()) {
+            FileWriter writer = null;
             try {
-                writer = new BufferedWriter(new FileWriter(path));
+                writer = new FileWriter(file);
                 writer.write(write);
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
-                try {
-                    if (!(writer == null)) {
+                if (writer != null) {
+                    try {
                         writer.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
-                } catch (IOException e) {
-                    e.printStackTrace();
                 }
             }
         }

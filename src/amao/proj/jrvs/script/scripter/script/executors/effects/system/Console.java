@@ -1,4 +1,4 @@
-package amao.proj.jrvs.scripter.script.executors.effects;
+package amao.proj.jrvs.script.scripter.script.executors.effects.system;
 
 import java.util.LinkedList;
 
