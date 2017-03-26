@@ -1,4 +1,4 @@
-var 'test' 'value'
 var 'console_' 'console effect text'
 
-console ';console_;'
+wait and execute '5' 'console .;console_;.'
+wait and execute '10' 'exit program'

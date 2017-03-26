@@ -1,6 +1,5 @@
 package amao.proj.jrvs.script.scripter.script.patterner;
 
-import amao.proj.jrvs.script.scripter.script.executors.effects.system.Console;
 import org.apache.commons.lang3.StringUtils;
 
 import java.lang.reflect.InvocationTargetException;
@@ -24,6 +23,8 @@ public class ScriptPatterner {
         addEffect("write file.[%% %%]", amao.proj.jrvs.script.scripter.script.executors.effects.file.Write.class);
         addEffect("create folder.[%%]", amao.proj.jrvs.script.scripter.script.executors.effects.folder.Create.class);
         addEffect("delete folder.[%%]", amao.proj.jrvs.script.scripter.script.executors.effects.folder.Delete.class);
+        addEffect("wait and execute.[%% %%]", amao.proj.jrvs.script.scripter.script.executors.effects.program.Wait.class);
+        addEffect("exit program.", amao.proj.jrvs.script.scripter.script.executors.effects.program.Exit.class);
     }
 
     public ScriptPatterner(String check) {
