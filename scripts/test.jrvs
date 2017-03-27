@@ -1,4 +1,1 @@
-var 'console_' 'console effect text'
-
-wait and execute '5' 'console .;console_;.'
-wait and execute '10' 'exit program'
+console '%get time hour%'
