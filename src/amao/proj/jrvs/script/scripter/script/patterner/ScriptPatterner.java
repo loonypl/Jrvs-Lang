@@ -17,6 +17,7 @@ public class ScriptPatterner {
     }
 
     protected void collect() {
+        // effects
         addEffect("console.[%%]", amao.proj.jrvs.script.scripter.script.executors.effects.system.Console.class);
         addEffect("create file.[%%]", amao.proj.jrvs.script.scripter.script.executors.effects.file.Create.class);
         addEffect("delete file.[%%]", amao.proj.jrvs.script.scripter.script.executors.effects.file.Delete.class);
@@ -30,6 +31,7 @@ public class ScriptPatterner {
     public ScriptPatterner(String check) {
         collect();
         recognizeEffect(check);
+        recognizeCondition(check);
     }
 
     protected void recognizeEffect(String check) {
@@ -61,6 +63,32 @@ public class ScriptPatterner {
                     } catch (InvocationTargetException e) {
                         e.printStackTrace();
                     }
+                }
+            }
+        }
+    }
+
+    protected void recognizeCondition(String check) {
+        if (check.startsWith("if ")) {
+            final String[] brackets = StringUtils.substringsBetween(check, "[", "]");
+            String[] args = StringUtils.substringsBetween(brackets[0], "'", "'");
+            if (args[0].equals(args[1])) {
+                String[] effects;
+                if (brackets[1].split(",").length != 0) effects = brackets[1].split(",");
+                else effects = brackets[1].split(", ");
+                if (effects.length != 0) {
+                    for (String effect : effects) new ScriptPatterner(effect);
+                }
+            }
+        } else if (check.startsWith("!if ")) {
+            final String[] brackets = StringUtils.substringsBetween(check, "[", "]");
+            String[] args = StringUtils.substringsBetween(brackets[0], "'", "'");
+            if (!(args[0].equals(args[1]))) {
+                String[] effects;
+                if (brackets[1].split(",").length != 0) effects = brackets[1].split(",");
+                else effects = brackets[1].split(", ");
+                if (effects.length != 0) {
+                    for (String effect : effects) new ScriptPatterner(effect);
                 }
             }
         }
