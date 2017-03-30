@@ -1,5 +1,6 @@
 package amao.proj.jrvs.script.scripter.script.patterner;
 
+import amao.proj.jrvs.script.scripter.script.patterner.collection.Collection;
 import org.apache.commons.lang3.StringUtils;
 
 import java.lang.reflect.InvocationTargetException;
@@ -8,28 +9,10 @@ import java.util.LinkedList;
 
 public class ScriptPatterner {
 
-    protected LinkedList<String> effects = new LinkedList<>();
-    protected LinkedHashMap<String, Class> executors = new LinkedHashMap<>();
-
-    protected void addEffect(String pattern, Class c) {
-        this.effects.add(pattern);
-        this.executors.put(pattern, c);
-    }
-
-    protected void collect() {
-        // effects
-        addEffect("console.[%%]", amao.proj.jrvs.script.scripter.script.executors.effects.system.Console.class);
-        addEffect("create file.[%%]", amao.proj.jrvs.script.scripter.script.executors.effects.file.Create.class);
-        addEffect("delete file.[%%]", amao.proj.jrvs.script.scripter.script.executors.effects.file.Delete.class);
-        addEffect("write file.[%% %%]", amao.proj.jrvs.script.scripter.script.executors.effects.file.Write.class);
-        addEffect("create folder.[%%]", amao.proj.jrvs.script.scripter.script.executors.effects.folder.Create.class);
-        addEffect("delete folder.[%%]", amao.proj.jrvs.script.scripter.script.executors.effects.folder.Delete.class);
-        addEffect("wait and execute.[%% %%]", amao.proj.jrvs.script.scripter.script.executors.effects.program.Wait.class);
-        addEffect("exit program.", amao.proj.jrvs.script.scripter.script.executors.effects.program.Exit.class);
-    }
+    protected LinkedList<String> effects = new Collection().getEffects();
+    protected LinkedHashMap<String, Class> executors = new Collection().getExecutors();
 
     public ScriptPatterner(String check) {
-        collect();
         recognizeEffect(check);
         recognizeCondition(check);
     }
