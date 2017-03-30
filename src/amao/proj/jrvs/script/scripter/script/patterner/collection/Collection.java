@@ -26,6 +26,14 @@ public class Collection {
         return this.exprs;
     }
 
+    public void registerEffect(String pattern, Class executor) {
+        addEffect(pattern, executor);
+    }
+
+    public void registerExpression(String pattern, Class responder) {
+        this.exprs.put(pattern, responder);
+    }
+
     protected void addEffect(String pattern, Class c) {
         this.effects.add(pattern);
         this.executors.put(pattern, c);

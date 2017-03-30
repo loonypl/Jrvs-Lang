@@ -3,6 +3,7 @@ package amao.proj.jrvs.script.scripter;
 import amao.proj.jrvs.script.JrvsScript;
 import amao.proj.jrvs.script.scripter.script.Script;
 import amao.proj.jrvs.script.scripter.script.ScriptCentral;
+import amao.proj.jrvs.script.scripter.script.patterner.collection.Collection;
 import amao.proj.jrvs.script.scripter.validator.Validator;
 import amao.proj.jrvs.script.scripter.validator.ValidatorType;
 
@@ -49,6 +50,14 @@ public class Scripter {
 
     protected LinkedList<Script> getScripts() {
         return this.scripts;
+    }
+
+    public void registerEffect(String pattern, Class executor) {
+        new Collection().registerEffect(pattern, executor);
+    }
+
+    public void registerExpression(String pattern, Class responder) {
+        new Collection().registerExpression(pattern, responder);
     }
 
     public void setup() {
