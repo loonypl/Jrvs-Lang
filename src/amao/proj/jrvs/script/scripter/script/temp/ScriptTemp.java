@@ -8,6 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class ScriptTemp {
@@ -53,12 +54,21 @@ public class ScriptTemp {
                             line = line.replaceAll(";" + key + ";", this.vars.get(key));
                         }
                         for (String expr : this.exprs.keySet()) {
-                            if (line.contains("%" + expr + "%")) {
+                            String exprName = "";
+                            for (int i = 0; i < expr.length(); i++) {
+                                if (!(String.valueOf(expr.charAt(i)).equalsIgnoreCase("."))) exprName = exprName + String.valueOf(expr.charAt(i));
+                                else break;
+                            }
+                            String exprIn = StringUtils.substringBetween(line, "%", "%");
+                            if (exprIn.contains(exprName)) {
                                 Class c = this.exprs.get(expr);
+                                LinkedList<Object> args = new LinkedList<>();
+                                String[] list = StringUtils.substringsBetween(exprIn, ".", ".");
                                 Object obj = null;
+                                for (String arg : list) args.add(arg);
                                 try {
                                     try {
-                                        obj = c.getMethod("run").invoke(null);
+                                        obj = c.getMethod("run", LinkedList.class).invoke(null, args);
                                     } catch (IllegalAccessException e) {
                                         e.printStackTrace();
                                     } catch (InvocationTargetException e) {
@@ -67,7 +77,7 @@ public class ScriptTemp {
                                 } catch (NoSuchMethodException e) {
                                     e.printStackTrace();
                                 }
-                                line = line.replaceAll("%" + expr + "%", String.valueOf(obj));
+                                line = line.replaceAll("%" + exprIn + "%", String.valueOf(obj));
                             }
                         }
                         writer.write(line + System.getProperty("line.separator"));

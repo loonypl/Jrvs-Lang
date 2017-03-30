@@ -51,14 +51,15 @@ public class Collection {
     }
 
     protected void expressions() {
-        this.exprs.put("get time", amao.proj.jrvs.script.scripter.script.responders.exprs.time.Get.class);
-        this.exprs.put("get time minute", amao.proj.jrvs.script.scripter.script.responders.exprs.time.Minute.class);
-        this.exprs.put("get time hour", amao.proj.jrvs.script.scripter.script.responders.exprs.time.Hour.class);
-        this.exprs.put("get date", amao.proj.jrvs.script.scripter.script.responders.exprs.date.Get.class);
-        this.exprs.put("get date month numeric", amao.proj.jrvs.script.scripter.script.responders.exprs.date.MonthNumeric.class);
-        this.exprs.put("get date month text", amao.proj.jrvs.script.scripter.script.responders.exprs.date.MonthText.class);
-        this.exprs.put("get date day", amao.proj.jrvs.script.scripter.script.responders.exprs.date.Day.class);
-        this.exprs.put("get date year", amao.proj.jrvs.script.scripter.script.responders.exprs.date.Year.class);
+        this.exprs.put("get time.", amao.proj.jrvs.script.scripter.script.responders.exprs.time.Get.class);
+        this.exprs.put("get time minute.", amao.proj.jrvs.script.scripter.script.responders.exprs.time.Minute.class);
+        this.exprs.put("get time hour.", amao.proj.jrvs.script.scripter.script.responders.exprs.time.Hour.class);
+        this.exprs.put("get date.", amao.proj.jrvs.script.scripter.script.responders.exprs.date.Get.class);
+        this.exprs.put("get date month numeric.", amao.proj.jrvs.script.scripter.script.responders.exprs.date.MonthNumeric.class);
+        this.exprs.put("get date month text.", amao.proj.jrvs.script.scripter.script.responders.exprs.date.MonthText.class);
+        this.exprs.put("get date day.", amao.proj.jrvs.script.scripter.script.responders.exprs.date.Day.class);
+        this.exprs.put("get date year.", amao.proj.jrvs.script.scripter.script.responders.exprs.date.Year.class);
+        this.exprs.put("get folders of.[%%]", amao.proj.jrvs.script.scripter.script.responders.exprs.folder.FoldersOf.class);
     }
 
 }
