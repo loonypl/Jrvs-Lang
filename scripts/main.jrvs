@@ -1,3 +1,3 @@
-var 'key' '%get folders of "E:/IdeaProjects/Jrvs Language/"%'
+var 'key' '%get date day%'
 
 console ';key;'
