@@ -5,7 +5,7 @@ For informations about variables, conditions, effects and variables go to <a tar
 <b>Jrvs</b> is easy, light and intuitive language written in Java.<br/>
 There is no compiler for Jrvs, <b>yet</b>.<br/>
 <br/>
-<b>Available effects:</b>
+<b>Available effects:</b> (8)
 * console [string]
 * create file [string (path)]
 * delete file [string (path)]
@@ -15,7 +15,7 @@ There is no compiler for Jrvs, <b>yet</b>.<br/>
 * wait and execute [int (delay in seconds)] [effects (splitted by ', ')]
 * repeat [int (how many times to repeat)] [effects (splitted by ', ')]
 <br/><br/>
-<b>Available expressions:</b>
+<b>Available expressions:</b> (26)
 * get time
 * get time minute
 * get time hour
