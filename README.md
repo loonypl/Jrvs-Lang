@@ -12,6 +12,7 @@ There is no compiler for Jrvs, <b>yet</b>.<br/>
 * write file [string (path)] [string (to write)]
 * create folder [string (path)]
 * delete folder [string (path)]
+* exit program
 * wait and execute [int (delay in seconds)] [effects (splitted by ', ')]
 * repeat [int (how many times to repeat)] [effects (splitted by ', ')]
 <br/><br/>
