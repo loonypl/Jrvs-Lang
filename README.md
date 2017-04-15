@@ -29,3 +29,16 @@ There is no compiler for Jrvs, <b>yet</b>.<br/>
 * get last letter of [string]
 * substrings between [string] [from (string)] [to (string)] [index (int)]
 * count in string [string] [letter to count (string)]
+* amount of letters in string [string]
+* get random letter
+* get random integer between [integer] [integer]
+* get random integer
+* get random double
+* plus integer [integer] [integer]
+* minus integer [integer] [integer]
+* multiply integer [integer] [integer]
+* divide integer [integer] [integer]
+* plus double [double] [double]
+* minus double [double] [double]
+* multiply double [double] [double]
+* divide double [double] [double]
