@@ -5,7 +5,7 @@ For informations about variables, conditions, effects and variables go to <a tar
 <b>Jrvs</b> is easy, light and intuitive language written in Java.<br/>
 There is no compiler for Jrvs, <b>yet</b>.<br/>
 <br/>
-<b>Available effects:</b> (8)
+<b>Available effects:</b> (9)
 * console [string]
 * create file [string (path)]
 * delete file [string (path)]
