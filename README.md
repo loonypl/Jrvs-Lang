@@ -14,7 +14,7 @@ There is no compiler for Jrvs, <b>yet</b>.<br/>
 * delete folder [string (path)]
 * wait and execute [int (delay in seconds)] [effects (splitted by ', ')]
 * repeat [int (how many times to repeat)] [effects (splitted by ', ')]
-<br/>
+<br/><br/>
 <b>Available expressions:</b>
 * get time
 * get time minute
