@@ -11,7 +11,7 @@ public class Wait {
 
     public Wait(LinkedList<Object> objs) {
         int timeout = Integer.parseInt((String) objs.get(0));
-        final String command = ((String) objs.get(1)).replaceAll("\\.", "'");
+        final String command = ((String) objs.get(1)).replaceAll("\"", "'");
         ScheduledThreadPoolExecutor thread = new ScheduledThreadPoolExecutor(1);
         Runnable runnable = new Runnable() {
             @Override
