@@ -1,0 +1,2 @@
+# waits 10 seconds and executing (console 'Hello' and console 'World') effects
+wait and execute '10' 'console "Hello", console "World"'
