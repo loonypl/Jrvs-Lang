@@ -27,14 +27,14 @@ public class ExpressionsCollection {
         collection.put("get first letter of.[%%]", amao.krzysek.lang.jrvs.collections.executors.expressions.string.First.class);
         // %get last letter of [string]%
         collection.put("get last letter of.[%%]", amao.krzysek.lang.jrvs.collections.executors.expressions.string.Last.class);
-        // %substrings between [string] [from (string)] [to (string)] [index (int)]%
+        // %substrings between [string] [from (string)] [to (string)] [index (integer)]%
         collection.put("substrings between.[%% %% %% %%]", amao.krzysek.lang.jrvs.collections.executors.expressions.string.Between.class);
         // %count in string [string] [letter to count (string)]%
         collection.put("count in string.[%% %%]", amao.krzysek.lang.jrvs.collections.executors.expressions.string.Count.class);
-        // %amount of letters in string "test"%
+        // %amount of letters in string [string]%
         collection.put("amount of letters in string.[%%]", amao.krzysek.lang.jrvs.collections.executors.expressions.string.CountAll.class);
-        collection.put("get random letter", amao.krzysek.lang.jrvs.collections.executors.expressions.string.RandomLetter.class);
-        // %get random integer between "10" "50"%
+        collection.put("get random letter.", amao.krzysek.lang.jrvs.collections.executors.expressions.string.RandomLetter.class);
+        // %get random integer between [integer] [integer]%
         collection.put("get random integer between.[%% %%]", amao.krzysek.lang.jrvs.collections.executors.expressions.integer.RandomBetween.class);
         collection.put("get random integer.", amao.krzysek.lang.jrvs.collections.executors.expressions.integer.Random.class);
         collection.put("get random double.", amao.krzysek.lang.jrvs.collections.executors.expressions.integer.familiar.DoubleRandom.class);
@@ -54,6 +54,61 @@ public class ExpressionsCollection {
         collection.put("multiply double.[%% %%]", amao.krzysek.lang.jrvs.collections.executors.expressions.integer.familiar.DoubleMultiply.class);
         // %divide double [double] [double]%
         collection.put("divide double.[%% %%]", amao.krzysek.lang.jrvs.collections.executors.expressions.integer.familiar.DoubleDivide.class);
+
+        // new
+
+        // string
+        // %get char at [integer (index)] [string]%
+        collection.put("get char at.[%% %%]", amao.krzysek.lang.jrvs.collections.executors.expressions.string.CharAt.class);
+
+        // %replace all [string (to replace)] [string (as replacement)] [string]%
+        collection.put("replace all.[%% %% %%]", amao.krzysek.lang.jrvs.collections.executors.expressions.string.ReplaceAll.class);
+
+        // %get md5 hash of [string]%
+        collection.put("get md5 hash of.[%%]", amao.krzysek.lang.jrvs.collections.executors.expressions.string.HashMd5.class);
+
+        // system
+        // %get os name%
+        collection.put("get os name.", amao.krzysek.lang.jrvs.collections.executors.expressions.system.Name.class);
+
+        // %get os version%
+        collection.put("get os version.", amao.krzysek.lang.jrvs.collections.executors.expressions.system.Version.class);
+
+        // %get os architecture%
+        collection.put("get os architecture.", amao.krzysek.lang.jrvs.collections.executors.expressions.system.Architecture.class);
+
+        // %get user dir%
+        collection.put("get user dir.", amao.krzysek.lang.jrvs.collections.executors.expressions.system.user.Dir.class);
+
+        // %get user home%
+        collection.put("get user home.", amao.krzysek.lang.jrvs.collections.executors.expressions.system.user.Home.class);
+
+        // %get user name%
+        collection.put("get user name.", amao.krzysek.lang.jrvs.collections.executors.expressions.system.user.Name.class);
+
+        // java
+        // %get java dir%
+        collection.put("get java dir.", amao.krzysek.lang.jrvs.collections.executors.expressions.java.Dir.class);
+
+        // %get java vendor%
+        collection.put("get java vendor.", amao.krzysek.lang.jrvs.collections.executors.expressions.java.Vendor.class);
+
+        // %get java vendor url%
+        collection.put("get java vendor url.", amao.krzysek.lang.jrvs.collections.executors.expressions.java.VendorUrl.class);
+
+        // %get java version%
+        collection.put("get java version.", amao.krzysek.lang.jrvs.collections.executors.expressions.java.Version.class);
+
+        // jrvs
+        // %get jrvs version%
+        collection.put("get jrvs version.", amao.krzysek.lang.jrvs.collections.executors.expressions.jrvs.Version.class);
+
+        // %get jrvs vendor%
+        collection.put("get jrvs vendor.", amao.krzysek.lang.jrvs.collections.executors.expressions.jrvs.Vendor.class);
+
+        // %get jrvs vendor url%
+        collection.put("get jrvs vendor url.", amao.krzysek.lang.jrvs.collections.executors.expressions.jrvs.VendorUrl.class);
+
         // end
         return collection;
     }
