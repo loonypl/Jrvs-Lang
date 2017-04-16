@@ -1,0 +1,3 @@
+var 'os name' '%get os name%'
+
+console ';os name;'
