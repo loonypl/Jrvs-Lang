@@ -16,7 +16,7 @@ There is no compiler for Jrvs, <b>yet</b>.<br/>
 * wait and execute [int (delay in seconds)] [effects (splitted by ', ')]
 * repeat [int (how many times to repeat)] [effects (splitted by ', ')]
 <br/><br/>
-<b>Available expressions:</b> (26)
+<b>Available expressions:</b> (42)
 * get time
 * get time minute
 * get time hour
@@ -43,3 +43,19 @@ There is no compiler for Jrvs, <b>yet</b>.<br/>
 * minus double [double] [double]
 * multiply double [double] [double]
 * divide double [double] [double]
+* get char at [integer (index)] [string]
+* replace all [string (to replace)] [string (as replacement)] [string]
+* get md5 hash of [string]
+* get os name
+* get os version
+* get os architecture
+* get user dir
+* get user home
+* get user name
+* get java dir
+* get java vendor
+* get java vendor url
+* get java version
+* get jrvs version
+* get jrvs vendor
+* get jrvs vendor url
