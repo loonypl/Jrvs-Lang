@@ -1,0 +1,3 @@
+var 'jrvs ver' '%get jrvs version%'
+
+console ';jrvs ver;'
