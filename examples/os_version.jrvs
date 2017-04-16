@@ -1,0 +1,3 @@
+var 'os ver' '%get os version%'
+
+console ';os ver;'
